@@ -1,0 +1,17 @@
+const inputBox = document.getElementById('inputBox');
+function clearInput() {
+    inputBox.value = '';
+}
+function deleteLast() {
+    inputBox.value = inputBox.value.slice(0, -1);
+}
+function appendToInput(value) {
+    inputBox.value += value;
+}
+function calculateResult() {
+    try {
+        inputBox.value = eval(inputBox.value);
+    } catch {
+        inputBox.value = 'Error';
+    }
+}
